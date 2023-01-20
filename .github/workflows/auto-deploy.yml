@@ -31,7 +31,7 @@ jobs:
           hexo generate
 
       - name: deploy
-        if: github.event_name == push
+        if: github.event_name == 'push'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: public
